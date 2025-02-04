@@ -1,7 +1,7 @@
 # Networking Fundamentals  
 ## Contents  
 ## Introduction  
-Suppose we have some divided networks, our home network and a company network. To send a packet to the company network, our router is used to send the packet to the ISP, the ISP looks in the DNS to locate the company network and returns the IP address. Now as the IP address is known, our packet is sent directly to the company network via the ISP. The web server (company's) receives our packet with the request of what their website looks like, then it sends us back the packet with the data for the presentation of the website via the router of the company network to our IP address.  
+Suppose we have some divided networks, our home network and a company network. To send a packet to the company network, our **router** is used to send the packet to the **ISP**, the ISP looks in the **DNS** to locate the company network and returns the **IP address**. Now as the IP address is known, our packet is sent directly to the company network via the ISP. The web server (company's) receives our packet with the request of what their website looks like, then it sends us back the packet with the data for the presentation of the website via the router of the company network to our IP address.  
 ## Network Types  
 - Wide Area Network (WAN) - Internet  
   - Just a large number of LANs joined together. Many companies and govt. agencies will have an "Internal WAN" (Intranet)  
@@ -19,13 +19,27 @@ Suppose we have some divided networks, our home network and a company network. T
 - Nodes - Network Interface Controller (NICs)  
   - Routers/Modems, Gateways, Firewalls, Switches
 - Classifications  
-  - 8 types of Network topologies - **Point-to-point, Star, Ring, Mesh, Bus, Hybrid, Daisy Chain, Tree**
-    - Bus Topology - No central network, all hosts connected to a transmission medium, one host sends, others receive.  
-    - Star Topology - 
+  - 8 types of Network topologies - **Point-to-point, Star, Ring, Mesh, Bus, Hybrid, Daisy Chain, Tree**  
+## Proxies  
+- Common misconception that whenever an IP address changes, it is a proxy. However, A proxy is when a device or service sits in the middle of a connection and acts as a mediator. The mediator must be able to inspect the contents of the traffic. Without the ability to be a mediator, the device is technically a `gateway`, not a proxy.  
+- The key types of proxies are -  
+  - Dedicated Proxy / Forward Proxy 
+    - Makes a request to a computer, computer carries out the request (eg. web filters in a corporate network for sensitive computers)  
+    - Web browsers (like IE, Chrome, Edge, etc.) all obey the "System Proxy" settings by default. If the malware utilizes WinSock, it will likely be proxy aware without any additional code.  
+    - If the org. only utilizes Firefox, it is highly improbable to get a proxy-aware malware as Firefox uses libcurl, and not WinSock.  
+  - Reverse Proxy  
+    - Filters incoming requests, opposite of Forward Proxy  
+    - CloudFlare can withstand most DDOS attacks. Orgs. can filter the amount and type of traffic that gets sent to their webservers.  
+    - Organizations may have **IDS (Intrusion Detection Systems)**, watching external web requests. If the attacker gains access to the organization over SSH, a reverse proxy can send web requests through the SSH Tunnel and evade the IDS.  
+  - Transparent Proxy  
 ## Tools  
 - Intrusion Detection Systems  
   - Suricata  
   - Snort  
+- DNS Monitoring  
+  - Sysmon  
+- Proxies  
+  - BurpSuite (Swiss army knife of HTTP Proxies, can be used to forward HTTP requests, can be configured to be a reverse proxy or transparent)  
 ## Networking Attacks  
 - Spoofing  
 - Man in the middle  
