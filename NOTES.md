@@ -32,6 +32,39 @@ Suppose we have some divided networks, our home network and a company network. T
     - CloudFlare can withstand most DDOS attacks. Orgs. can filter the amount and type of traffic that gets sent to their webservers.  
     - Organizations may have **IDS (Intrusion Detection Systems)**, watching external web requests. If the attacker gains access to the organization over SSH, a reverse proxy can send web requests through the SSH Tunnel and evade the IDS.  
   - Transparent Proxy  
+    - Client does not know about the existence of the proxy.  
+    - Intercepts the client's connection request to the Internet and acts as a substitute instance.  
+  - Non-Transparent Proxy  
+    - We must be informed about the existence of the proxy.  
+    - We and the software we want to use are given a special proxy config. that ensures the traffic to the Internet is first addressed by the proxy.  
+## Networking Models  
+- OSI Model  
+  - Ref model that can be used to define and describe the communication between systems.  
+  - Layers  
+    - 7. Application Layer  
+      - FTP, HTTP  
+    - 6. Presentation Layer  
+      - JPG, PNG, SSL, TLS  
+    - 5. Session Layer  
+      - NetBIOS  
+    - 4. Transport Layer  
+      - TCP, UDP  
+    - 3. Network Layer  
+      - Router, L3 Switch  
+    - 2. Data-Link Layer  
+      - Switch, Bridge  
+    - 1. Physical Layer  
+      - Network Card  
+  - Layers 1 to 3 are media layers and 4 to 7 are host layers.  
+- TCP/IP Model  
+  - TCP/IP generic term for many network protocols.  
+  - The protocols are responsible for the switching and transfer of data packets on the Internet.  
+  - Name for entire protocol family, not just TCP and IP.  
+  - Layers  
+    - 4. Application  
+    - 3. Transport  
+    - 2. Internet  
+    - 1. Link  
 ## Tools  
 - Intrusion Detection Systems  
   - Suricata  
@@ -49,3 +82,8 @@ Suppose we have some divided networks, our home network and a company network. T
 - DMZ - Demilitarized Zone  
 - HTTP - HyperText Transfer Protocol  
 - HTTPS - HyperText Transfer Protocol Secure (adds a layer of encryption to HTTP using SSL and TLS to protect the data being transferred)  
+- OSI - Open Systems Interconnection  
+- TCP - Transmission Control Protocol  
+- IP - Internet Protocol  
+- ICMP - Internet Control Message Protocol  
+- UDP - User Datagram Protocol  
