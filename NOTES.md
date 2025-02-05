@@ -38,7 +38,7 @@ Suppose we have some divided networks, our home network and a company network. T
     - We must be informed about the existence of the proxy.  
     - We and the software we want to use are given a special proxy config. that ensures the traffic to the Internet is first addressed by the proxy.  
 ## Networking Models  
-- OSI Model  
+### OSI Model  
   - Ref model that can be used to define and describe the communication between systems.  
   - Layers  
     - 7. Application Layer  
@@ -56,7 +56,7 @@ Suppose we have some divided networks, our home network and a company network. T
     - 1. Physical Layer  
       - Network Card  
   - Layers 1 to 3 are media layers and 4 to 7 are host layers.  
-- TCP/IP Model  
+### TCP/IP Model  
   - TCP/IP generic term for many network protocols.  
   - The protocols are responsible for the switching and transfer of data packets on the Internet.  
   - Name for entire protocol family, not just TCP and IP.  
@@ -65,6 +65,15 @@ Suppose we have some divided networks, our home network and a company network. T
     - 3. Transport  
     - 2. Internet  
     - 1. Link  
+  - IP ensures that the data packet reaches its destination, and TCP controls the data transfer and ensures the connection between data stream and application.  
+  - The main difference between TCP/IP and OSI is the number of layers, some of which have been combined.  
+  - IP takes over the **logical addressing** of networks and nodes.  
+  - Important tasks of TCP/IP  
+    - Logical addressing(IP)  
+    - Routing(IP)  
+    - Error & Control Flow(TCP)  
+    - Application Support(TCP)  
+    - Name Resolution(DNS)  
 ## Tools  
 - Intrusion Detection Systems  
   - Suricata  
@@ -87,3 +96,4 @@ Suppose we have some divided networks, our home network and a company network. T
 - IP - Internet Protocol  
 - ICMP - Internet Control Message Protocol  
 - UDP - User Datagram Protocol  
+- MAC - Media Access Control  
