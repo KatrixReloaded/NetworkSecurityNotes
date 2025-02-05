@@ -1,6 +1,6 @@
 # Networking Fundamentals  
 ## Contents  
-## Introduction  
+### Introduction  
 Suppose we have some divided networks, our home network and a company network. To send a packet to the company network, our **router** is used to send the packet to the **ISP**, the ISP looks in the **DNS** to locate the company network and returns the **IP address**. Now as the IP address is known, our packet is sent directly to the company network via the ISP. The web server (company's) receives our packet with the request of what their website looks like, then it sends us back the packet with the data for the presentation of the website via the router of the company network to our IP address.  
 ## Network Types  
 - Wide Area Network (WAN) - Internet  
